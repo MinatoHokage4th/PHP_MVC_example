@@ -1,7 +1,9 @@
 <?php
 
-class About extends Controller {
-    public function index($nama = "Sugiyanto" , $jobtitle = "Programmer"){
+class About extends Controller
+{
+    public function index($nama = "Professor", $jobtitle = "Programmer")
+    {
         //echo "About/index";
         //echo "Hello, Nama saya $name, saya adalah seorang $jobtitle";
         $data['nama'] = $nama;
@@ -12,7 +14,8 @@ class About extends Controller {
         $this->view('about/index', $data);
         $this->view('templates/footer', $data);
     }
-    public function page(){
+    public function page()
+    {
         //echo "About/page";
         $data['judul'] = 'PAGE';
         $this->view('templates/header', $data);
@@ -20,4 +23,3 @@ class About extends Controller {
         $this->view('templates/footer', $data);
     }
 }
-?>
