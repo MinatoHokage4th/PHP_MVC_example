@@ -81,7 +81,7 @@ class Mahasiswa_m
     public function searchMhsDB()
     {
         $keyword = $_POST['keyword'];
-        $query = "SELECT * FROM " . $this->table_name . " WHERE username LIKE :keyword OR email LIKE :keyword OR email LIKE :keyword;";
+        $query = "SELECT * FROM " . $this->table_name . " WHERE username LIKE :keyword OR email LIKE :keyword OR jurusan LIKE :keyword;";
         $this->db->query($query);
         $this->db->bind('keyword', "%$keyword%");
         return array($this->db->resultSet(), $this->db->rowCount());
