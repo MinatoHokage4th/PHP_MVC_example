@@ -1,9 +1,10 @@
 <?php
 
-class User_m{
+class User_m
+{
     private $nama = 'Sugiyanto';
-    public function getUser(){
+    public function getUser()
+    {
         return $this->nama;
     }
 }
-?>
